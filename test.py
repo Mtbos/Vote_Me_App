@@ -70,7 +70,7 @@ def Forget_Button():
         elif len(passwordEntry.get()) < 8:
             messagebox.showerror('Password error', 'Password must be 8 character long')
         else:
-            con = pymysql.connect(host='localhost', user='root', password='#Mtboss123', database='userdata')
+            con = pymysql.connect(host='localhost', user='root', password='', database='userdata')
             mycursor = con.cursor()
             query = 'select * from data where email=%s'
             mycursor.execute(query, EmailLabel_Entry.get())
